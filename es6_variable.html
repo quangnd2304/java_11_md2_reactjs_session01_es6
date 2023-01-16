@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Demo</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo biến với từ khóa var - toàn cục và cục bộ
+        //--> có thể khai báo và gán giá trị lại
+        // Toàn cục
+        var number = 10;
+        function printNumber() {
+            // Cục bộ            
+            var number = 5;
+            console.log("Giá trị number trong function: ", number);
+        }
+        //Khai báo lại và gán lại giá trị
+        var number = 20;
+        printNumber();
+        console.log("Giá trị number ngoài function: ", number);
+        // Khai báo biến bằng let - phạm vi khối lệnh
+        //--> Không thể khai báo lại, có thể gán lại giá trị
+        let number1 = 15;
+        number1 = 10;
+        console.log("Number1-->", number1);
+        //Khai báo biến bằng const - phạm vi khối lệnh --> hằng số
+        //--> không thể khai báo lại, không thể gán giá trị lại
+        const PI = 3.14;
+        PI = 5.6;
+        console.log("PI-->", PI);
+    </script>
+</body>
+
+</html>

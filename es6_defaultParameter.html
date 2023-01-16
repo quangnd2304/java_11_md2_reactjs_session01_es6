@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo tham số mặc định khi khai báo hàm
+        function add(number1, number2 = 10) {
+            let total = number1 + number2;
+            return total;
+        }
+        console.log("Tong 5,10 la: ", add(5));
+        console.log("Tong 5,7 là:", add(5, 7));
+        // Khai báo tham số mặc khi trong thân hàm
+        function printStudentName(studentName) {
+            studentName = studentName || "Tên mặc định";
+            console.log("Tên sinh viên: ", studentName);
+        }
+        printStudentName("Nguyễn Văn A");
+        printStudentName();
+    </script>
+</body>
+
+</html>

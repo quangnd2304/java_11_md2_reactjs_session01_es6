@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+    <script>
+        // Sử dụng đối tượng argument đại diện cho các đối số truyền vào của hàm
+        function sumNumber() {
+            let total = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            return total;
+        }
+        console.log("Tổng 2 số là: ", sumNumber(3, 4));
+        console.log("Tổng 3 số là: ", sumNumber(3, 4, 5));
+        // Sử dụng tham số còn lại
+        function sumNumbers2(number1, number2, ...numbers) {
+            console.log("Numbers-->", numbers);
+            let total = number1 + number2;
+            for (let i = 0; i < numbers.length; i++) {
+                total += numbers[i];
+            }
+            return total;
+        }
+        console.log("Tổng 2 số là: ", sumNumbers2(1, 2));
+        console.log("Tổng 3 số là: ", sumNumbers2(1, 2, 3));
+        console.log("Tổng 4 số là: ", sumNumbers2(1, 2, 3, 4));
+    </script>
+</body>
+
+</html>

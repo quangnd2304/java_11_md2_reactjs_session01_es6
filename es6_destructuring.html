@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3];
+        let num1 = arr[0];
+        let num2 = arr[1];
+        // Destructuring với mảng
+        let [a, b, d] = arr;
+        console.log("a=", a);
+        console.log("b=", b);
+        console.log("d=", d);
+        // Destructuring với đối tượng
+        let person = { id: "P001", name: "Nguyen Van A", age: 20 };
+        let personName = person["name"];
+        console.log("Person Name-->", personName);
+        let { name, age } = person;
+        console.log("Age --> ", age);
+    </script>
+</body>
+
+</html>

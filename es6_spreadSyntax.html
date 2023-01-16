@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Syntax</title>
+</head>
+
+<body>
+    <script>
+        // Spread với mảng
+        let oldArr = [1, 2, 3];
+        let newArr = [oldArr, 4, 5];
+        console.log("New Array-->", newArr);
+        console.log("New Array length-->", newArr.length);
+        let newArrSpread = [...oldArr, 4, 5];
+        console.log("New Array Spread-->", newArrSpread);
+        // Spread với đối tượng
+        let person = { id: "P001", name: "Nguyễn Văn A" };
+        let student = { ...person, age: 20 };
+        console.log("Student-->", student);
+    </script>
+</body>
+
+</html>
